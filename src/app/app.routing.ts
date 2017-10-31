@@ -4,12 +4,22 @@ import { Routes, RouterModule} from '@angular/router';
 //importar componentes
 import { EmpleadoComponent} from './empleado/empleado.component';
 import { FrutaComponent} from './fruta/fruta.component';
+import { HomeComponent} from './home/home.component';
+import { ContactoComponent} from './contacto/contacto.component';
+import { ModuloComponent} from './modulo/modulo.component';
+import { CochesComponent} from './coches/coches.component';
 
 const appRoutes:Routes= [
-	{path: '',component:EmpleadoComponent},
+	{path: '',component:HomeComponent},
 	{path: 'empleado', component:EmpleadoComponent},
 	{path: 'fruta', component:FrutaComponent},
-	{path: '**',component: EmpleadoComponent}
+	{path: 'home', component:HomeComponent},
+	{path: 'contacto', component:ContactoComponent},
+	{path: 'contacto/:page', component:ContactoComponent},
+	{path: 'modulo', component:ModuloComponent},
+	{path: 'modulo/:page', component:ModuloComponent},
+	{path: 'coches', component:CochesComponent},
+	{path: '**',component: HomeComponent}
 ];
 
 export const appRoutingProviders: any[] = [];
